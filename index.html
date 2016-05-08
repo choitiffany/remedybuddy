@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+
+<meta charset="UTF-8">
+<title> Medicine </title>
+ 
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    <script>
+	function setColor(e) {
+	  var target = e.target,
+	      status = e.target.classList.contains('active');
+	  
+	  e.target.classList.add(status ? 'inactive' : 'active');
+	  e.target.classList.remove(status ? 'active' : 'inactive');
+	} 
+	</script>
+</head>
+
+<body>
+<section id="intro">
+<div align="center">
+	<h1>Remedy Buddy </h1>
+	<p class="header"> Over-the-counter medicine delivered straight to your door! </p>
+		<h2> Do you have any of these symptoms? </h2>
+			<!-- SYMPTOMS -->
+			<ul class="symptoms">
+				<li><input type="button" id="button" class="middlelist" value="Fever" onclick="setColor(event)";/></li>
+				<li><input type="button" id="button" class="middlelist" value="Runny Nose" onclick="setColor(event)";/></li>
+				<li><input type="button" id="button" class="middlelist" value="Cough" onclick="setColor(event)";/></li>
+				<li><input type="button" id="button" class="middlelist" value="Sore Throat" onclick="setColor(event)";/></li>
+				<li><input type="button" id="button" class="middlelist" value="Congestion" onclick="setColor(event)";/></li>
+			</ul>
+<h2> Select your preferred type of medicine: </h2>
+	<!-- LIQUID or PILL -->
+	<ul class="type">
+		<label for="liquid-radio" class="radio-hide">
+		<li>
+		<input type="radio" name="form" value="liquid" id="liquid-radio">
+		<img src="images/liquid.svg" alt=liquid width=20 class="liquid">Liquid</li></label>
+
+		
+		<label for="pill-radio" class="radio-hide">
+		<li>
+		<input type="radio" name="form" value="pill" id="pill-radio">
+		<img src="images/pill.svg" alt=pill width=20>Pill</li></label>
+		
+	</ul>
+		<br>
+
+	<!-- DROWSY or NON DROWSY -->
+	<ul class="type">
+		<label for="drowsy-radio" class="radio-hide">
+			<li>
+			<input type="radio" name="form2" value="liquid" id="drowsy-radio">
+			<img src="images/drowsy.svg" alt=liquid width=20 class="liquid">Drowsy
+			</li>
+		</label>
+
+		<label for="nondrowsy-radio" class="radio-hide">
+			<li>
+			<input type="radio" name="form2" value="pill" id="nondrowsy-radio">
+			<img src="images/nondrowsy.svg" alt=nondrowsy width=20>Non-Drowsy</li>
+		</label>
+	</ul>
+<h2><a href="results.html" class="page-scroll" id="submit"> Submit </a></h2>
+</div>
+</section>
+
+<script  src="js/site.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+</body>
+
+</html>

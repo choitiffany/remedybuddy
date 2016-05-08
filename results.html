@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+
+<meta charset="UTF-8">
+<title> Medicine </title>
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>  
+
+    <script>
+	function setColor(e) {
+	  var target = e.target,
+	      status = e.target.classList.contains('active');
+	  
+	  e.target.classList.add(status ? 'inactive' : 'active');
+	  e.target.classList.remove(status ? 'active' : 'inactive');
+	} 
+	</script>  
+</head>
+
+<body>
+<section id="response">
+	<div class="results_size">
+	<h1> Get well soon! </h1>
+		<section class="result_info">
+			<h2> Symptoms</h2>
+				<ul class="symptoms_result">
+				<li><input type="button" id="button" class="middlelist" value="Fever" style="background-color: #F5822D" onclick="setColor(event)";/></li>
+				<li><input type="button" id="button" class="middlelist" value="Runny Nose" onclick="setColor(event)";/></li>
+				<li><input type="button" id="button" class="middlelist" value="Cough" onclick="setColor(event)";/></li>
+				<li><input type="button" id="button" class="middlelist" value="Sore Throat" style="background-color: #F5822D" check onclick="setColor(event)";/></li>
+				<li><input type="button" id="button" class="middlelist" value="Congestion" onclick="setColor(event)";/></li>
+			</ul>
+				</ul>
+			<h2> Type of Medicine </h2>
+				<ul class="type_result">
+					<label for="liquid-radio" class="radio-hide">
+					<li style="background-color: #F5822D">
+					<img src="images/liquid.svg" alt=liquid width=20 class="liquid">Liquid</li></label>
+
+					
+					<label for="pill-radio" class="radio-hide">
+					<li>
+					<img src="images/pill.svg" alt=pill width=20>Pill</li></label>
+				</ul>
+				<ul class="type_result" style="margin-top:20px;">
+					<label for="drowsy-radio" class="radio-hide">
+						<li style="background-color: #F5822D">			
+						<img src="images/drowsy.svg" alt=liquid width=20 class="liquid">Drowsy
+						</li>
+					</label>
+
+					<label for="nondrowsy-radio" class="radio-hide">
+						<li>
+						<img src="images/nondrowsy.svg" alt=nondrowsy width=20>Non-Drowsy</li>
+					</label>
+				</ul>	
+		</section>
+
+		<section class="results">
+			<h2> Recommendations </h2>
+				<div class="tylenolliquid">
+				<img src="images/tylenolliquid.jpg" alt=tylenolliquid width="200">
+					<div class="med_info">
+						<div id="tabs-container">
+					    <ul class="tabs-menu">
+					        <li class="current"><a href="#tab-1"> Information</a></li>
+							<li><a href="#tab-2">Reviews</a></li>
+						</ul>
+							<div class="tab">
+					    		<div id="tab-1" class="tab-content">
+								<h4>TYLENOL Cold + Sore Throat</h4>
+								<article> Soothes sore throats, fever and body aches while a cooling sensation lets you know help is on the way. </article>
+								<img src="images/stars.png" alt=stars class="stars">
+								<h3> $7.49 </h3>
+								</div>
+							</div>
+							<div id="tab-2" class="tab-content">
+								 <img src="images/stars.png" alt=stars class="stars">
+								 <article class="review"> This product worked for me and I liked it. I had the worst sore throat ever and it really affected my work so I'm glad I stumbled upon this. </article>
+							</div>
+						</div>
+					</div>
+					</div>
+
+				<div class="rob">
+				<img src="images/robit.jpg" alt=robitussin width="200">
+					<div class="med_info">
+						<div id="tabs-container2">
+					    <ul class="tabs-menu2">
+					        <li class="current2"><a href="#tab-3"> Information</a></li>
+							<li><a href="#tab-4">Reviews</a></li>
+						</ul>
+							<div class="tab">
+					    		<div id="tab-3" class="tab-content2">
+								<h4>Robitussin</h4>
+								<article> Get twice the strength against mucus in a non-drowsy formula ideal for colds that include cough and chest congestion. </article>
+								<img src="images/stars.png" alt=stars class="stars">
+								<h3> $8.99 </h3>
+								</div>
+							</div>
+							<div id="tab-4" class="tab-content2">
+								 <img src="images/stars.png" alt=stars class="stars">
+								 <article class="review"> WOW! This product helped stop the pain from my cold. I don't usually like to take medicine but this stuff works so well that I don't even mind the taste or texture of it. </article>
+							</div>
+						</div>
+					</div>
+					</div>
+		</section>
+		</div>
+</section>
+
+
+<script  src="js/site.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrolling-nav.js"></script>
+</body>
+
+</html>
